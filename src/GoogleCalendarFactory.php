@@ -24,7 +24,12 @@ class GoogleCalendarFactory
 
         $client->setScopes([
             Google_Service_Calendar::CALENDAR,
+            Google_Service_Calendar::CALENDAR_EVENTS,
         ]);
+
+        if ($config['service_account_user']) {
+            $client->setSubject($config['service_account_user']);
+        }
 
         $client->setAuthConfig($config['service_account_credentials_json']);
 

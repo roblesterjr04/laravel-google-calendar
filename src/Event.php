@@ -19,9 +19,10 @@ class Event
     /** @var array */
     protected $attendees;
 
-    public function __construct()
+    public function __construct($calendarId = null)
     {
         $this->attendees = [];
+        $this->calendarId = $calendarId;
         $this->googleEvent = new Google_Service_Calendar_Event;
     }
 
