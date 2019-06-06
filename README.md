@@ -1,16 +1,16 @@
 # Manage events on a Google Calendar
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-google-calendar.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-google-calendar)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rob-lester-jr04/laravel-google-calendar.svg?style=flat-square)](https://packagist.org/packages/rob-lester-jr04/laravel-google-calendar)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-google-calendar/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-google-calendar)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-google-calendar.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-google-calendar)
+[![Build Status](https://img.shields.io/travis/rob-lester-jr04/laravel-google-calendar/master.svg?style=flat-square)](https://travis-ci.org/rob-lester-jr04/laravel-google-calendar)
+[![Quality Score](https://img.shields.io/scrutinizer/g/rob-lester-jr04/laravel-google-calendar.svg?style=flat-square)](https://scrutinizer-ci.com/g/rob-lester-jr04/laravel-google-calendar)
 [![StyleCI](https://styleci.io/repos/58305903/shield?branch=master)](https://styleci.io/repos/58305903)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-google-calendar.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-google-calendar)
+[![Total Downloads](https://img.shields.io/packagist/dt/rob-lester-jr04/laravel-google-calendar.svg?style=flat-square)](https://packagist.org/packages/rob-lester-jr04/laravel-google-calendar)
 
 This package makes working with a Google Calendar a breeze. Once it has been set up you can do these things:
 
 ```php
-use Spatie\GoogleCalendar\Event;
+use Lester\GoogleCalendar\Event;
 
 //create a new event
 $event = new Event;
@@ -44,14 +44,12 @@ Event::create([
 $event->delete();
 ```
 
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
-
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-google-calendar
+composer require rob-lester-jr04/laravel-google-calendar
 ```
 
 Next up the service provider must be registered:
@@ -59,16 +57,16 @@ Next up the service provider must be registered:
 ```php
 'providers' => [
     ...
-    Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
+    Lester\GoogleCalendar\GoogleCalendarServiceProvider::class,
 ];
 ```
 
-Optionally the  `Spatie\GoogleCalendar\GoogleCalendarFacade` must be registered:
+Optionally the  `Lester\GoogleCalendar\GoogleCalendarFacade` must be registered:
 
 ```php
 'aliases' => [
 	...
-    'GoogleCalendar' => Spatie\GoogleCalendar\GoogleCalendarFacade::class,
+    'GoogleCalendar' => Lester\GoogleCalendar\GoogleCalendarFacade::class,
     ...
 ]
 ```
@@ -76,7 +74,7 @@ Optionally the  `Spatie\GoogleCalendar\GoogleCalendarFacade` must be registered:
 You must publish the configuration with this command:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\GoogleCalendar\GoogleCalendarServiceProvider"
+php artisan vendor:publish --provider="Lester\GoogleCalendar\GoogleCalendarServiceProvider"
 ```
 
 This will publish file called `google-calendar.php` in your config-directory with this contents:
@@ -127,7 +125,7 @@ Open up the “Calendar Details” tab to see the id of the calendar. You need t
 
 ### Getting events
 
-You can fetch all events by simply calling `Event::get();` this will return all events of the coming year. An event comes in the form of a `Spatie\GoogleCalendar\Event` object.
+You can fetch all events by simply calling `Event::get();` this will return all events of the coming year. An event comes in the form of a `Lester\GoogleCalendar\Event` object.
 
 The full signature of the function is:
 
@@ -152,7 +150,7 @@ $events[0]->endDateTime;
 
 ### Creating an event
 
-You can just new up a `Spatie\GoogleCalendar\Event`-object
+You can just new up a `Lester\GoogleCalendar\Event`-object
 
 ```php
 $event = new Event;
@@ -188,7 +186,7 @@ $event->save();
 
 ### Getting a single event
 
-Google assigns a unique id to every single event. You can get this id by getting events using the `get` method and getting the `id` property on a `Spatie\GoogleCalendar\Event`-object:
+Google assigns a unique id to every single event. You can get this id by getting events using the `get` method and getting the `id` property on a `Lester\GoogleCalendar\Event`-object:
 ```php
 // get the id of the first upcoming event in the calendar.
 $eventId = Event::get()->first()->id;
@@ -254,29 +252,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
-
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
+If you discover any security related issues, please email robertlesterjr@mac.com instead of using the issue tracker.
 
 ## Credits
 
-- [Freek Van der Herten](https://github.com/freekmurze)
-- [All Contributors](../../contributors)
-
-A big thank you to [Sebastiaan Luca](https://github.com/sebastiaanluca) for his big help creating v2 of this package.
-
-## Support us
-
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
-
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie). 
-All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
+This is a Fork of [Spatie's google calendar package](https://github.com/spatie/laravel-google-calendar)
 
 ## License
 
