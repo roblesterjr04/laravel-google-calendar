@@ -211,6 +211,13 @@ class Event
         }
     }
 
+    public function length($in = 'minutes'): int
+    {
+        $in = ucwords($in);
+        $method = "diffIn$in";
+        return $this->startDateTime->$method($this->endDateTime);
+    }
+
     protected function getFieldName(string $name): string
     {
         return [
