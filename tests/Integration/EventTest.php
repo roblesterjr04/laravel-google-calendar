@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\GoogleCalendar\Tests\Integration;
+namespace Lester\GoogleCalendar\Tests\Integration;
 
 use DateTime;
 use Carbon\Carbon;
-use Spatie\GoogleCalendar\Event;
-use Spatie\GoogleCalendar\Tests\TestCase;
+use Lester\GoogleCalendar\Event;
+use Lester\GoogleCalendar\Tests\TestCase;
 
 class EventTest extends TestCase
 {
-    /** @var \Spatie\GoogleCalendar\Event */
+    /** @var \Lester\GoogleCalendar\Event */
     protected $event;
 
     public function setUp()
