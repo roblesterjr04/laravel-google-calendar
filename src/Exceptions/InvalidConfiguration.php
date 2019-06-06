@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\GoogleCalendar\Exceptions;
+namespace Lester\GoogleCalendar\Exceptions;
 
 use Exception;
 

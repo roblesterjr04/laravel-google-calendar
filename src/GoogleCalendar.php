@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\GoogleCalendar;
+namespace Lester\GoogleCalendar;
 
 use DateTime;
 use Carbon\Carbon;
