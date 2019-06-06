@@ -1,15 +1,15 @@
 {
-    "name": "spatie/laravel-google-calendar",
+    "name": "rob-lester-jr04/laravel-google-calendar",
     "description": "Manage events on a Google Calendar",
     "keywords": [
-        "spatie",
+        "roblesterjr04",
         "calendar",
         "google",
         "event",
         "schedule",
         "laravel-google-calendar"
     ],
-    "homepage": "https://github.com/spatie/laravel-google-calendar",
+    "homepage": "https://github.com/roblesterjr04/laravel-google-calendar",
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +17,10 @@
             "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
+        },
+        {
+            "name": "Robert Lester",
+            "email": "robertlesterjr@mac.com"
         }
     ],
     "require": {
@@ -32,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\GoogleCalendar\\": "src"
+            "Lester\\GoogleCalendar\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\GoogleCalendar\\Tests\\": "tests"
+            "Lester\\GoogleCalendar\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\GoogleCalendar\\GoogleCalendarServiceProvider"
+                "Lester\\GoogleCalendar\\GoogleCalendarServiceProvider"
             ],
             "aliases": {
-                "GoogleCalendar": "Spatie\\GoogleCalendar\\GoogleCalendarFacade"
+                "GoogleCalendar": "Lester\\GoogleCalendar\\GoogleCalendarFacade"
             }
         }
     },
