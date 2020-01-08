@@ -24,7 +24,7 @@ class GoogleCalendarFactory
 
         $client->setScopes([
             Google_Service_Calendar::CALENDAR,
-            Google_Service_Calendar::CALENDAR_EVENTS,
+            //Google_Service_Calendar::CALENDAR_EVENTS,
         ]);
 
         if ($config['service_account_user']) {
